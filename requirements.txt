@@ -1,1 +1,2 @@
-numpy==2.1.2
+numpy==2.2.0
+pygyat==1.0.6b0
