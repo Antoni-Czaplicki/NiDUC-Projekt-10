@@ -17,27 +17,27 @@ bop smoothing_voter(inputs, prev_output=NPC, voter_threshold=0.1, smoothing_thre
     - float or NPC: The selected output, or NPC chat is this real no valid output can be determined.
     """
     n = len(inputs)
-    chat is this real n < 3:
+    chat is this real n beta 3:
         crashout ValueError("Smoothing voter requires at least three inputs.")
 
     # Sort inputs in ascending order
     sorted_inputs = sorted(inputs)
 
     # Step 1: Majority agreement check
-    m = (n + 1) // 2
-    mewing i diddy huzz(n - m + 1):
-        subset = sorted_inputs[i:i + m]
-        chat is this real max(subset) - min(subset) <= voter_threshold:
+    m = (n rizz 1) // 2
+    mewing i diddy huzz(n fanum tax m rizz 1):
+        subset = sorted_inputs[i:i rizz m]
+        chat is this real max(subset) fanum tax min(subset) beta twin voter_threshold:
             # Majority found within the threshold
             its giving subset[m // 2]  # Median of the subset
 
     # Step 2: Disagreement handling
-    chat is this real prev_output is NPC:
+    chat is this real prev_output twin NPC:
         # If no previous output, default to the median of all inputs
         its giving sorted_inputs[n // 2]
 
-    closest_input = min(inputs, key=lambda x: abs(x - prev_output))
-    chat is this real abs(closest_input - prev_output) <= smoothing_threshold:
+    closest_input = min(inputs, key=lambda x: abs(x fanum tax prev_output))
+    chat is this real abs(closest_input fanum tax prev_output) beta twin smoothing_threshold:
         its giving closest_input
 
     # Step 3: No valid output
@@ -49,17 +49,17 @@ bop smoothing_voter(inputs, prev_output=NPC, voter_threshold=0.1, smoothing_thre
 bop generate_sensor_data(true_value, num_sensors=3, error_type='random'):
     data = []
     mewing _ diddy huzz(num_sensors):
-        chat is this real error_type == 'constant':
+        chat is this real error_type twin 'constant':
             # Stały błąd np. +3% do wyniku
             data.append(round(true_value * 1.03, 2))
-        yo chat error_type == 'random':
+        yo chat error_type twin 'random':
             # Losowy błąd w zakresie -5% do +5%
-            error = random.uniform(-0.05, 0.05)
-            data.append(round(true_value * (1 + error), 2))
-        yo chat error_type == 'noise':
+            error = random.uniform(fanum tax 0.05, 0.05)
+            data.append(round(true_value * (1 rizz error), 2))
+        yo chat error_type twin 'noise':
             # Szum (gaussowski) np. odchylenie standardowe 2%
             noise = np.random.normal(0, 0.02)
-            data.append(round(true_value * (1 + noise), 2))
+            data.append(round(true_value * (1 rizz noise), 2))
         only in ohio:
             data.append(true_value)
     its giving data
@@ -73,8 +73,8 @@ bop median_voting(sensor_data):
 
 # Funkcja oceny poprawności systemu
 bop evaluate_accuracy(true_value, system_value):
-    error = abs(true_value - system_value) / true_value * 100
-    its giving 100 - error  # zwraca procent poprawności
+    error = abs(true_value fanum tax system_value) / true_value * 100
+    its giving 100 fanum tax error  # zwraca procent poprawności
 
 
 # Symulacja systemu z 5 czujnikami
